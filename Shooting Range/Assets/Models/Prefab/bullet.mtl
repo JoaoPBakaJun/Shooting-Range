@@ -1,0 +1,86 @@
+newmtl AWP:Boddy2_Texture
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Texture.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl AWP:Boddy_Texture
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Texture.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 96.08
+newmtl AWP:Lens
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd LenSight.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl AWP:Mag_Texture
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Texture.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 96.08
+newmtl AWP:None
+illum 4
+Kd 0.80 0.80 0.80
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.80 0.80 0.80
+Ns 0.00
+newmtl AWP:Punch_Texture
+illum 4
+Kd 0.04 0.04 0.04
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl AWP:Sight2_Texture
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Texture.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl AWP:Texture
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Texture.png
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 96.08
+newmtl AWP:btext
+illum 4
+Kd 0.80 0.01 0.01
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 96.08
+newmtl AWP:buletext
+illum 4
+Kd 0.80 0.35 0.01
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
