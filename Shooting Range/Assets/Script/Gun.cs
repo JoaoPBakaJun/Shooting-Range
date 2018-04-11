@@ -3,6 +3,10 @@
 public class Gun : MonoBehaviour {
 
     public float range = 100f;
+    public float mag = 30f;
+    public float currentMag = 10f;
+    public float reloadAmount = 30f;
+    public float maxMag = 30f;
     public float bulletForce = 50f;
     public float cooldown = 0.2f;
     float cooldownRemaining = 0;
@@ -22,13 +26,21 @@ public class Gun : MonoBehaviour {
 
         cooldownRemaining -= Time.deltaTime;
 
-        if (Input.GetButton("Fire1") && cooldownRemaining <= 0)
+        if (Input.GetButton("Fire1") && cooldownRemaining <= 0 && currentMag >= 1)
         {
             cooldownRemaining = cooldown;
-
+            
             GameObject bullet = (GameObject)Instantiate(bulletPrefab, Cam.transform.position + Cam.transform.forward, Cam.transform.rotation);
             bullet.GetComponent<Rigidbody>().AddForce(Cam.transform.forward * bulletForce, ForceMode.Impulse);
+            currentMag = currentMag - 1;
         }
+    
+        if(Input.GetKeyDown(KeyCode.R) && currentMag <= 0 && mag >= 1)
+        {
+            currentMag = maxMag;
+            mag = mag - reloadAmount;
+        }
+
 	}
 
     void Shoot()

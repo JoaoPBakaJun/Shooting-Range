@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
 public class WeaponSwitching : MonoBehaviour {
-
     public int selectedWeapon = 0;
+    
 
 	// Use this for initialization
 	void Start ()
@@ -13,6 +13,8 @@ public class WeaponSwitching : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+
+       // GameObject isScope = GameObject.Find("WeaponHolder");
 
         int previousSelectedWeapon = selectedWeapon;
 
@@ -38,8 +40,13 @@ public class WeaponSwitching : MonoBehaviour {
             selectedWeapon = 0;
         }
 
-        if(Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2)
+
+		if(Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2)
         {
+           //Scope scope = isScope.GetComponent<Scope>();
+            // scope.isScoped = false;
+            //scope.OnUnscoped();
+
             selectedWeapon = 1;
         }
 

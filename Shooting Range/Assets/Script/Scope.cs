@@ -12,11 +12,11 @@ public class Scope : MonoBehaviour {
     public Camera mainCamera;
     public float scopedFOV = 15f;
     private float normalFOV;
-    private bool isScoped = false;
+    public bool isScoped = false;
 
     void Update()
     {
-        if(Input.GetButtonDown("Fire2"))
+		if(Input.GetButtonDown("Fire2"))
         {
             isScoped = !isScoped;
             animator.SetBool("IsScoped", isScoped);
@@ -29,17 +29,19 @@ public class Scope : MonoBehaviour {
             }
             else
                 OnUnscoped();
-
         }
     }
 
-    void OnUnscoped()
+
+
+	void OnUnscoped()
     {
-        scope.SetActive(false);
+	    scope.SetActive(false);
         wepCamera.SetActive(true);
 
         mainCamera.fieldOfView = normalFOV;
     }
+		
 
     IEnumerator OnScoped()
     {
