@@ -12,7 +12,11 @@ public class Scope : MonoBehaviour {
     public Camera mainCamera;
     public float scopedFOV = 15f;
     private float normalFOV;
-    public bool isScoped = false;
+	public static bool isScoped = false;
+
+
+	//WeaponSwitching sW = WeaponSwitching.GetComponent<WeaponSwitching>().selectedWeapon;
+
 
     void Update()
     {
@@ -23,35 +27,37 @@ public class Scope : MonoBehaviour {
 
             scope.SetActive(isScoped);
 
-            if (isScoped)
+			if (isScoped)
             {
                 StartCoroutine(OnScoped());
             }
             else
                 OnUnscoped();
         }
+
     }
 
 
 
 	void OnUnscoped()
     {
-	    scope.SetActive(false);
-        wepCamera.SetActive(true);
+			scope.SetActive (false);
+			wepCamera.SetActive (true);
 
-        mainCamera.fieldOfView = normalFOV;
+			mainCamera.fieldOfView = normalFOV;
     }
 		
 
     IEnumerator OnScoped()
     {
-        yield return new WaitForSeconds(.15f);
 
-        scope.SetActive(true);
-        wepCamera.SetActive(false);
+			yield return new WaitForSeconds (.15f);
 
-        normalFOV = mainCamera.fieldOfView;
-        mainCamera.fieldOfView = scopedFOV;
+			scope.SetActive (true);
+			wepCamera.SetActive (false);
+
+			normalFOV = mainCamera.fieldOfView;
+			mainCamera.fieldOfView = scopedFOV;
     }
 
 }

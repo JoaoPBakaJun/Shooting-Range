@@ -27,6 +27,7 @@ public class FPSController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		
 
 		//Rotation with mouse
 		float horizontalRotation = Input.GetAxis("Mouse X") * mouseSensitivity;

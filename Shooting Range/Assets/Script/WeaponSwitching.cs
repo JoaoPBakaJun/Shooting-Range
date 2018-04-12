@@ -13,6 +13,7 @@ public class WeaponSwitching : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+		//Scope isScoped = GetComponent<Scope> ().isScoped;
 
        // GameObject isScope = GameObject.Find("WeaponHolder");
 
@@ -41,12 +42,8 @@ public class WeaponSwitching : MonoBehaviour {
         }
 
 
-		if(Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2)
+		if(Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2 && Scope.isScoped == false)
         {
-           //Scope scope = isScope.GetComponent<Scope>();
-            // scope.isScoped = false;
-            //scope.OnUnscoped();
-
             selectedWeapon = 1;
         }
 

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-	public GameObject bullet_prefab;
+	/*public GameObject bullet_prefab;
     float bulletForce = 100f;
 	public float bulletRange = 100.0f;
 	public float cooldown = 0.5f;
 	float cooldownRemaining = 0;
 	bool weaponSwap = false;
 
-	public GameObject debrisPrefab;
+	public GameObject debrisPrefab;*/
 
 	// Use this for initialization
 	void Start () 

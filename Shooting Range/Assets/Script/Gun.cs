@@ -2,9 +2,8 @@
 
 public class Gun : MonoBehaviour {
 
-    public float range = 100f;
-    public float mag = 30f;
-    public float currentMag = 10f;
+    public static float mag = 30f;
+    public static float currentMag = 10f;
     public float reloadAmount = 30f;
     public float maxMag = 30f;
     public float bulletForce = 50f;
@@ -24,16 +23,21 @@ public class Gun : MonoBehaviour {
 	void Update ()
     {
 
-        cooldownRemaining -= Time.deltaTime;
 
-        if (Input.GetButton("Fire1") && cooldownRemaining <= 0 && currentMag >= 1)
+
+       cooldownRemaining -= Time.deltaTime;
+
+		if (Input.GetButton("Fire1") && cooldownRemaining <= 0 && currentMag >= 1)
         {
             cooldownRemaining = cooldown;
             
             GameObject bullet = (GameObject)Instantiate(bulletPrefab, Cam.transform.position + Cam.transform.forward, Cam.transform.rotation);
             bullet.GetComponent<Rigidbody>().AddForce(Cam.transform.forward * bulletForce, ForceMode.Impulse);
             currentMag = currentMag - 1;
+
+
         }
+
     
         if(Input.GetKeyDown(KeyCode.R) && currentMag <= 0 && mag >= 1)
         {
@@ -43,18 +47,19 @@ public class Gun : MonoBehaviour {
 
 	}
 
-    void Shoot()
+   /* void Shoot()
     {
-        /*RaycastHit hit;
+       RaycastHit hit;
        if ( Physics.Raycast(Cam.transform.position, Cam.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
+			Debug.Log(hit.transform.name);
 
-            Target target = hit.transform.GetComponent<Target>();
-            if(target != null)
+            Target50m target50m = hit.transform.GetComponent<Target50m>();
+            if(target50m != null)
             {
-                target.TakeDamage(damage);
+				target50m.GainScore(gS);
             }
-        }*/
-    }
+        }
+    }*/
+
 }
