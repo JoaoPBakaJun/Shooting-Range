@@ -1,0 +1,58 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class EndGameMenu : MonoBehaviour
+{
+
+    public static bool gameEnd = false;
+    public static bool inMainMenu = false;
+    public GameObject endGameMenu;
+	
+	// Update is called once per frame
+	void Update ()
+    {
+        if (TimeLeft.timeLeftA <= 0)
+        {
+            EndGame();
+            
+        }
+       // if()
+    }
+
+
+    void EndGame()
+    {
+        Screen.lockCursor = false;
+        endGameMenu.SetActive(true);
+        Time.timeScale = 0f;
+        gameEnd = true;
+    }
+
+   /* public void Resume()
+    {
+        Screen.lockCursor = true;
+        endGameMenu.SetActive(false);
+        Time.timeScale = 1f;
+        gameEnd = false;
+    }*/
+
+    public void LoadMenu()
+    {
+        inMainMenu = true;
+        gameEnd = false;
+        endGameMenu.SetActive(false);
+        TimeLeft.timeLeftA = 10f;
+        SceneManager.LoadScene("Menu");
+        Time.timeScale = 1f;
+        Debug.Log("MenuLoading");
+    }
+
+	public void ExitGame()
+	{
+
+		Application.Quit ();
+		Debug.Log ("ExitingGame");
+	}
+}
