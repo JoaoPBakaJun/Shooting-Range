@@ -18,8 +18,6 @@ public class AK : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        mag = 90f;
-        currentMag = 30f;
     }
 
     // Update is called once per frame

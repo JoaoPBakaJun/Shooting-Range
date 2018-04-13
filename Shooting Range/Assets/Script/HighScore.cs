@@ -4,17 +4,19 @@ using UnityEngine;
 public class HighScore : MonoBehaviour {
 
     public Text highScore;
-    public float totalHighScore = 0f;
+    public float savedHighScore = 0f;
+    public static float totalHighScore = 0f;
+
 
     // Update is called once per frame
     void Update () {
 
-        if (Score.TotalScore >= totalHighScore)
-        {
-            totalHighScore = Score.TotalScore;
+        savedHighScore = Score.TotalScore;
 
-            highScore.text = totalHighScore.ToString("0");
-            
+        if (savedHighScore >= EndGameMenu.savedScore)
+        {
+            totalHighScore = savedHighScore;       
         }
-	}
+        highScore.text = totalHighScore.ToString("0");
+    }
 }

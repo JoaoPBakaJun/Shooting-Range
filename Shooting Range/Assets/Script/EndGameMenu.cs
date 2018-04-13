@@ -8,6 +8,7 @@ public class EndGameMenu : MonoBehaviour
 
     public static bool gameEnd = false;
     public static bool inMainMenu = false;
+    public static float savedScore = 0f;
     public GameObject endGameMenu;
 	
 	// Update is called once per frame
@@ -40,6 +41,11 @@ public class EndGameMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        Target50m.score = 0f;
+        Target100m.score = 0f;
+        Target150m.score = 0f;
+        Target200m.score = 0f;
+        savedScore = HighScore.totalHighScore;
         inMainMenu = true;
         gameEnd = false;
         endGameMenu.SetActive(false);

@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour 
 {
+
+    void Start()
+    {
+       // Score.TotalScore = 0f;
+    }
+
 	public void PlayGame()
 	{
         EndGameMenu.inMainMenu = false;
