@@ -43,7 +43,14 @@ public class PauseMenu : MonoBehaviour
 
 	public void LoadMenu()
 	{
-		SceneManager.LoadScene ("Menu");
+        Target50m.score = 0f;
+        Target100m.score = 0f;
+        Target150m.score = 0f;
+        Target200m.score = 0f;
+        EndGameMenu.savedScore = HighScore.totalHighScore;
+        EndGameMenu.inMainMenu = true;
+        TimeLeft.timeLeftA = 60f;
+        SceneManager.LoadScene ("Menu");
 		Time.timeScale = 1f;
 		Debug.Log ("MenuLoading");
 	}

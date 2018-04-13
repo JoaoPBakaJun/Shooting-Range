@@ -9,4 +9,5 @@ public class CurrentMag : MonoBehaviour {
 	void Update () {
 		magText.text = Gun.currentMag.ToString ("0");
 	}
+
 }

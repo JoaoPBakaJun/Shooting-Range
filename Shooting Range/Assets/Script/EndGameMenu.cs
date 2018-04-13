@@ -19,7 +19,6 @@ public class EndGameMenu : MonoBehaviour
             EndGame();
             
         }
-       // if()
     }
 
 
@@ -31,13 +30,6 @@ public class EndGameMenu : MonoBehaviour
         gameEnd = true;
     }
 
-   /* public void Resume()
-    {
-        Screen.lockCursor = true;
-        endGameMenu.SetActive(false);
-        Time.timeScale = 1f;
-        gameEnd = false;
-    }*/
 
     public void LoadMenu()
     {
@@ -49,7 +41,7 @@ public class EndGameMenu : MonoBehaviour
         inMainMenu = true;
         gameEnd = false;
         endGameMenu.SetActive(false);
-        TimeLeft.timeLeftA = 10f;
+        TimeLeft.timeLeftA = 60f;
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;
         Debug.Log("MenuLoading");

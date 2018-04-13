@@ -16,10 +16,10 @@ public class Gun : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        mag = 30f;
-        currentMag = 10f;
-        AK.mag = 90f;
-        AK.currentMag = 30f;
+            mag = 30f;
+            currentMag = 10f;
+            AK.mag = 90f;
+            AK.currentMag = 30f;
 	}
 	
 	// Update is called once per frame

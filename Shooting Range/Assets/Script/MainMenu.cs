@@ -6,18 +6,20 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour 
 {
 
-    void Start()
-    {
-       // Score.TotalScore = 0f;
-    }
-
 	public void PlayGame()
 	{
         EndGameMenu.inMainMenu = false;
 		SceneManager.LoadScene ("Level1");
-	}
+        Time.timeScale = 1f;
+    }
+    public void PlayGame2()
+    {
+        EndGameMenu.inMainMenu = false;
+        SceneManager.LoadScene("Level2");
+        Time.timeScale = 1f;
+    }
 
-	public void QuitGame()
+    public void QuitGame()
 	{
 		Debug.Log ("Exiting game");
 		Application.Quit ();

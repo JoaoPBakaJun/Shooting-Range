@@ -4,7 +4,7 @@ using UnityEngine;
 public class TimeLeft : MonoBehaviour {
 
 	public Text timeLeft;
-	public static float timeLeftA = 10f;
+	public static float timeLeftA = 60f;
 
 
 	// Update is called once per frame
