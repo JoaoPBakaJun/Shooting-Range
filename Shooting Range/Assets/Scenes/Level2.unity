@@ -865,7 +865,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 348079592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 252.33, y: 0, z: 255.94}
+  m_LocalPosition: {x: 250.19, y: 0, z: 255.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1942640972}
@@ -1740,6 +1740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefc784cbffb09e4a93c0885c75b8b44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  extraTime: 5
   endGameMenu: {fileID: 1671344071}
 --- !u!1 &713150090
 GameObject:
@@ -2934,10 +2935,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35949b08d11638c449f6766ef65efa32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 250
   reloadAmount: 30
   maxMag: 30
   bulletForce: 150
   cooldown: 0.2
+  raycastScore: 0
   bulletPrefab: {fileID: 1526067876923144, guid: 8aaf2959d46abd84c9823cadbaf28991,
     type: 2}
   Cam: {fileID: 1942640971}
@@ -4479,10 +4482,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9df368faab1da7a408e269b6f1d98b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 250
   reloadAmount: 30
   maxMag: 30
   bulletForce: 250
   cooldown: 1.5
+  raycastScore: 0
   bulletPrefab: {fileID: 1526067876923144, guid: 8aaf2959d46abd84c9823cadbaf28991,
     type: 2}
   Cam: {fileID: 1942640971}

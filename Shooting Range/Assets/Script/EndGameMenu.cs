@@ -37,6 +37,10 @@ public class EndGameMenu : MonoBehaviour
         Target100m.score = 0f;
         Target150m.score = 0f;
         Target200m.score = 0f;
+        Gun.raycastScore = 0f;
+        Gun2.raycastScore = 0f;
+        AK.raycastScore = 0f;
+        AK2.raycastScore = 0f;
         savedScore = HighScore.totalHighScore;
         inMainMenu = true;
         gameEnd = false;

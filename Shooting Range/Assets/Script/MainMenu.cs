@@ -19,6 +19,7 @@ public class MainMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+
     public void QuitGame()
 	{
 		Debug.Log ("Exiting game");

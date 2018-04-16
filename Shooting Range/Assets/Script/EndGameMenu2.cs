@@ -8,6 +8,7 @@ public class EndGameMenu2 : MonoBehaviour {
     public static bool gameEnd = false;
     public static bool inMainMenu = false;
     public static float savedScore = 0f;
+    public float extraTime = 5f;
     public GameObject endGameMenu;
 
     // Update is called once per frame
@@ -15,7 +16,11 @@ public class EndGameMenu2 : MonoBehaviour {
     {
         if (Gun2.currentMag <= 0 && AK2.currentMag <= 0)
         {
-            EndGame();
+            extraTime -= Time.deltaTime;
+            if(extraTime <= 0)
+            {
+                EndGame();
+            }
         }
     }
 
@@ -42,6 +47,10 @@ public class EndGameMenu2 : MonoBehaviour {
         Target100m.score = 0f;
         Target150m.score = 0f;
         Target200m.score = 0f;
+        Gun.raycastScore = 0f;
+        Gun2.raycastScore = 0f;
+        AK.raycastScore = 0f;
+        AK2.raycastScore = 0f;
         savedScore = HighScore2.totalHighScore;
         inMainMenu = true;
         gameEnd = false;
